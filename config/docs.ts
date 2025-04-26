@@ -29,11 +29,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation",
         },
         {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
           title: "Components",
           href: "/docs/documentation/components",
         },

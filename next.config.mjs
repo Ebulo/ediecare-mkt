@@ -1,17 +1,15 @@
-import { withContentlayer } from "next-contentlayer"
-
-import "./env.mjs"
+// import "./env.mjs"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    domains: ["*"],
   },
   experimental: {
     appDir: true,
-    serverComponentsExternalPackages: ["@prisma/client"],
+    // serverComponentsExternalPackages: ["@prisma/client"],
   },
 }
 
-export default withContentlayer(nextConfig)
+export default nextConfig
