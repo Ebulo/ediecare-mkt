@@ -40,18 +40,18 @@ export default async function IndexPage() {
       </section>
 
 
-      <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8" id="join-form">
+      <section className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24" id="join-form">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Join the Eddiecare Waitlist
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg">
             Be the first to experience a revolution in healthcare. Fill in your details below.
           </p>
         </div>
         <form className="mx-auto mt-12 max-w-xl space-y-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="name" className="block text-sm font-medium">
               Name
             </label>
             <input
@@ -59,12 +59,12 @@ export default async function IndexPage() {
               name="name"
               id="name"
               required
-              className="mt-1 block w-full rounded-md border-gray-300 p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="John Doe"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium">
               Email
             </label>
             <input
@@ -72,12 +72,12 @@ export default async function IndexPage() {
               name="email"
               id="email"
               required
-              className="mt-1 block w-full rounded-md border-gray-300 p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="john@example.com"
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="phone" className="block text-sm font-medium">
               Phone Number
             </label>
             <input
@@ -85,17 +85,20 @@ export default async function IndexPage() {
               name="phone"
               id="phone"
               required
-              className="mt-1 block w-full rounded-md border-gray-300 p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="+1 (555) 123-4567"
             />
           </div>
           <div>
-            <button
+            {/* <button
               type="submit"
-              className="inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="inline-flex w-full justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Join the Waitlist
-            </button>
+            </button> */}
+            <Link href="/" className={cn(buttonVariants({ size: "lg" }))}>
+              Join the Waitlist
+            </Link>
           </div>
         </form>
       </section>
@@ -104,7 +107,7 @@ export default async function IndexPage() {
 
       <section
         id="features"
-        className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+        className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
@@ -145,7 +148,7 @@ export default async function IndexPage() {
         </div>
         <div className="mx-auto text-center md:max-w-[58rem]">
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Taxonomy also includes a blog and a full-featured documentation site
+            Eddiecare also includes a blog and a full-featured documentation site
             built using and MDX.
           </p>
         </div>
@@ -156,7 +159,7 @@ export default async function IndexPage() {
       <section id="open-source" className="container mt-20 py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Proudly Built in House
+            Proudly Built by Tech Hub
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Eddiecare is open source and powered by open source software. <br />{" "}
