@@ -118,7 +118,7 @@ const Waitlist = () => {
                         type="button"
                         disabled={loading}
                         onClick={handleJoinWaitlist}
-                        className={cn(buttonVariants({ size: "sm" }), "w-full")}
+                        className={cn(buttonVariants({ size: "lg" }), "w-full")}
                     >
                         {loading ? "Joining..." : "Join the Waitlist"}
                     </button>
