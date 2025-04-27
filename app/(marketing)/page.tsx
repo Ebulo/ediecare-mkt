@@ -3,6 +3,8 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import Waitlist from "@/components/waitlist/waitlist"
+import ContactForm from "@/components/waitlist/contactus"
 
 
 export default async function IndexPage() {
@@ -24,13 +26,14 @@ export default async function IndexPage() {
           <p className="max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             Eddiecare connects patients with healthcare providers for telemedicine, scheduling, and health tracking.
           </p>
-          <div className="space-x-4">
+          <div className="space-x-4" style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
             <Link href="#features" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
             </Link>
             <Link
               href={"/#join-form"}
               rel="noreferrer"
+              style={{ marginLeft: "0px" }}
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
             >
               Join the Waitlist
@@ -40,70 +43,7 @@ export default async function IndexPage() {
       </section>
 
 
-      <section className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24" id="join-form">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Join the Eddiecare Waitlist
-          </h2>
-          <p className="mt-4 text-lg">
-            Be the first to experience a revolution in healthcare. Fill in your details below.
-          </p>
-        </div>
-        <form className="mx-auto mt-12 max-w-xl space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              placeholder="John Doe"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              placeholder="john@example.com"
-            />
-          </div>
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              required
-              className="mt-1 block w-full rounded-md p-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              placeholder="+1 (555) 123-4567"
-            />
-          </div>
-          <div>
-            {/* <button
-              type="submit"
-              className="inline-flex w-full justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              Join the Waitlist
-            </button> */}
-            <Link href="/" className={cn(buttonVariants({ size: "lg" }))}>
-              Join the Waitlist
-            </Link>
-          </div>
-        </form>
-      </section>
-
-
+      <Waitlist />
 
       <section
         id="features"
@@ -154,7 +94,7 @@ export default async function IndexPage() {
         </div>
       </section>
 
-
+      <ContactForm />
 
       <section id="open-source" className="container mt-20 py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
